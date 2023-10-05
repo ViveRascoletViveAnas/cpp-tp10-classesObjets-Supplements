@@ -143,3 +143,87 @@ ndnd.teleport(3, 6);
 ndnd.collision_detection(lrrr);
 // => true
 ```
+
+
+
+## Exo 7 - Jardin d'enfants
+
+### Instructions
+
+À partir d'un diagramme, déterminez quelles plantes chaque enfant de la classe de maternelle est responsable.
+
+La classe de maternelle apprend à cultiver des plantes. L'enseignant a pensé que ce serait une bonne idée de leur donner de vraies graines, de les planter dans de la vraie terre et de faire pousser de vraies plantes.
+
+Ils ont choisi de faire pousser de l'herbe, du trèfle, des radis et des violettes.
+
+À cet effet, les enfants ont mis des petits gobelets le long des rebords des fenêtres et ont planté un type de plante dans chaque gobelet, en choisissant au hasard parmi les types de graines disponibles.
+
+```text
+[window][window][window]
+........................ // chaque point représente un gobelet
+........................
+```
+Il y a 12 enfants dans la classe :
+
+- Alice, Bob, Charlie, David,
+- Eve, Fred, Ginny, Harriet,
+- Ileana, Joseph, Kincaid et Larry.
+
+Chaque enfant reçoit 4 gobelets, deux sur chaque rangée. Leur enseignant attribue les gobelets aux enfants par ordre alphabétique de leurs noms.
+
+Le diagramme suivant représente les plantes d'Alice :
+
+```text
+[window][window][window]
+VR......................
+RH......................
+```
+Sur la première rangée, la plus proche des fenêtres, elle a une violette et un radis. Sur la deuxième rangée, elle a un radis et de l'herbe.
+
+Votre programme recevra les plantes de gauche à droite à partir de la rangée la plus proche des fenêtres. À partir de cela, il devrait être capable de déterminer quelles plantes appartiennent à chaque élève.
+
+Par exemple, si on vous dit que le jardin ressemble à ceci :
+
+```text
+[window][window][window]
+VRCHVVRVCHHCCHVRHCVCHCHV
+VRCCCHCRRHVCHCRVVCVHCHCV
+```
+
+Alors si on demande les plantes d'Alice, la réponse devrait être :
+
+Violettes, radis, violettes, radis
+
+Tandis que si on demande les plantes de Bob, la réponse devrait être :
+
+Trèfle, herbe, trèfle, trèfle
+
+### Implémentation en C++
+
+Vous devez créer une classe `Garden` en C++.Votre classe devra implémenter une méthode appelée `plantes`, qui prend le nom d'un élève comme argument et renvoie la liste des noms des plantes appartenant à cet élève.
+
+#### Constructeurs
+
+Pour créer le jardin d'exemple suivant :
+
+```text
+[window][window][window]
+VRCHVVRVCHHCCHVRHCVCHCHV
+VRCCCHCRRHVCHCRVVCVHCHCV
+```
+
+dans les tests, cela serait représenté par `Garden("VRCHVVRVCHHCCHVRHCVCHCHV\nVRCCCHCRRHVCHCRVVCVHCHCV")`. 
+
+Pour que cette représentation fonctionne, votre classe devra mettre en œuvre un constructeur.
+
+#### Paramètres par défaut
+
+Dans certains tests, une liste d'élèves est passée en argument au constructeur, sous forme de vecteur. Cela devrait remplacer la liste de douze élèves fournie dans l'énoncé du problème. Les deux déclarations suivantes doivent fonctionner avec votre constructeur :
+
+```cpp
+# Créer un jardin basé sur la liste par défaut des douze élèves.
+Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV") 
+
+# Créer un jardin basé sur une liste de deux élèves.
+Garden("VRCC\nVCHH", {"Valorie", "Raven"}) 
+``````
