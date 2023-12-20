@@ -1,6 +1,8 @@
-# TP 10 - Classes et objets - BONUS
+# TP 10 - Classes et objets - Suppléments
 
-## Exo 6 - Ellen's Alien Game
+Toujours sur les classes et objets, 2 exercices supplémentaires avec plus de difficulté. On commence à aborder la notion de constructeur.
+
+## Exo 1 - Ellen's Alien Game
 
 ### Classes
 Il est temps d'aborder l'un des paradigmes fondamentaux de C++ : la programmation orientée objet (OOP). L'OOP est centrée autour des classes, qui sont des types de données définis par l'utilisateur avec leur propre ensemble de fonctions associées. Nous commencerons par les bases puis aborderons des sujets plus avancés par la suite.
@@ -146,7 +148,7 @@ ndnd.collision_detection(lrrr);
 
 
 
-## Exo 7 - Jardin d'enfants
+## Exo 2 - Jardin d'enfants
 
 ### Instructions
 
